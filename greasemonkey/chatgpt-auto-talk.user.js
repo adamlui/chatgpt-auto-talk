@@ -3,7 +3,7 @@
 // @description         Automatically play ChatGPT responses
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2024.7.17.2
+// @version             2024.7.17.3
 // @license             MIT
 // @match               *://chatgpt.com/*
 // @match               *://chat.openai.com/*
@@ -18,6 +18,10 @@
 // @grant               GM_xmlhttpRequest
 // @grant               GM.xmlHttpRequest
 // @noframes
+// @downloadURL         https://update.greasyfork.org/scripts/500940/autoclear-chatgpt-history.user.js
+// @updateURL           https://update.greasyfork.org/scripts/500940/autoclear-chatgpt-history.meta.js
+// @homepageURL         https://github.com/adamlui/chatgpt-auto-talk
+// @supportURL          https://github.com/adamlui/chatgpt-auto-talk/issues
 // @contributionURL     https://github.com/sponsors/adamlui
 // ==/UserScript==
 
