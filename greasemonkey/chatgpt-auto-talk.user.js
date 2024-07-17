@@ -225,7 +225,7 @@
 // @description:zu      Dlala izimpendulo ze-ChatGPT ngokuzenzakalela
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2024.7.17.6
+// @version             2024.7.17.7
 // @license             MIT
 // @icon                https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-talk/assets/images/icons/openai/black/icon48.png?9f1ed3c
 // @icon64              https://cdn.jsdelivr.net/gh/adamlui/chatgpt-auto-talk/assets/images/icons/openai/black/icon64.png?9f1ed3c
@@ -535,11 +535,9 @@
     async function insertToggle() {
 
         // Insert toggle
-        const parentToInsertInto = document.querySelector('nav ' +
-            (isGPT4oUI ? '' // nav div itself
-                : '> div:not(.invisible)')) // upper nav div
+        const parentToInsertInto = document.querySelector('nav > div:nth-of-type(2)') // upper nav div
         if (!parentToInsertInto.contains(navToggleDiv))
-            parentToInsertInto.insertBefore(navToggleDiv, parentToInsertInto.children[1])
+             parentToInsertInto.insertBefore(navToggleDiv, parentToInsertInto.children[1])
 
         // Tweak styles
         if (isGPT4oUI) navToggleDiv.style.flexGrow = 'unset' // overcome OpenAI .grow
