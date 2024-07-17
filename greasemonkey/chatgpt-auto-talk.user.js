@@ -3,7 +3,7 @@
 // @description         Automatically play ChatGPT responses
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2024.7.17
+// @version             2024.7.17.1
 // @license             MIT
 // @match               *://chatgpt.com/*
 // @match               *://chat.openai.com/*
@@ -29,8 +29,8 @@
     const config = {
         appName: 'ChatGPT Auto-Talk', appSymbol: '📣', keyPrefix: 'chatGPTautoTalk',
         gitHubURL: 'https://github.com/adamlui/chatgpt-auto-talk',
-        greasyForkURL: '#',
-        latestAssetCommitHash: '1427c26' } // for cached messages.json + navicon
+        greasyForkURL: 'https://greasyfork.org/en/scripts/500940-chatgpt-auto-talk',
+        latestAssetCommitHash: '6fcc47b' } // for cached messages.json + navicon
     config.updateURL = config.greasyForkURL.replace('https://', 'https://update.')
         .replace(/(\d+)-?([a-zA-Z-]*)$/, (_, id, name) => `${ id }/${ !name ? 'script' : name }.meta.js`)
     config.supportURL = config.gitHubURL + '/issues/new'
@@ -328,7 +328,7 @@
         const navicon = document.getElementById('atToggleNavicon') || document.createElement('img')
         navicon.id = 'atToggleNavicon'
         navicon.style.width = navicon.style.height = '1.25rem'
-        navicon.style.marginLeft = isGPT4oUI ? '2px' : '4px' ; navicon.style.marginRight = '4px'
+        navicon.style.marginLeft = isGPT4oUI ? '3px' : '5px' ; navicon.style.marginRight = '2.5px'
 
         // Create/ID/disable/hide/update checkbox
         const toggleInput = document.getElementById('atToggleInput') || document.createElement('input')
