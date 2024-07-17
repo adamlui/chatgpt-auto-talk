@@ -3,7 +3,7 @@
 // @description         Automatically play ChatGPT responses
 // @author              Adam Lui
 // @namespace           https://github.com/adamlui
-// @version             2024.7.17.1
+// @version             2024.7.17.2
 // @license             MIT
 // @match               *://chatgpt.com/*
 // @match               *://chat.openai.com/*
@@ -136,7 +136,7 @@
         const toggleInput = document.getElementById('atToggleInput')
         toggleInput.checked = !toggleInput.checked ; config.autoTalkDisabled = !toggleInput.checked
         updateToggleHTML() ; refreshMenu()
-        notify(`${ msgs.menuLabel_autoTalk || 'Auto-Talk' }: ${menuState.word[+!config.autoTalkDisabled]}`)
+        notify(`${ msgs.mode_autoTalk || 'Auto-Talk' }: ${menuState.word[+!config.autoTalkDisabled]}`)
         saveSetting('autoTalkDisabled', config.autoTalkDisabled)
     }
 
@@ -172,7 +172,7 @@
 
         // Add command to toggle auto-clear
         const atLabel = menuState.symbol[+!config.autoTalkDisabled] + ' '
-                      + ( msgs.menuLabel_autoTalk || 'Auto-Talk' )
+                      + ( msgs.mode_autoTalk || 'Auto-Talk' )
                       + menuState.separator + menuState.word[+!config.autoTalkDisabled]
         menuIDs.push(GM_registerMenuCommand(atLabel, () => document.getElementById('atToggleLabel').click()))
 
@@ -369,7 +369,7 @@
         toggleLabel.style.width = `${ chatgpt.browser.isMobile() ? 201 : isGPT4oUI ? 145 : 148 }px` // to truncate overflown text
         toggleLabel.style.overflow = 'hidden' // to truncate overflown text
         toggleLabel.style.textOverflow = 'ellipsis' // to truncate overflown text
-        toggleLabel.innerText = ( msgs.menuLabel_autoTalk || 'Auto-Talk' ) + ' '
+        toggleLabel.innerText = ( msgs.mode_autoTalk || 'Auto-Talk' ) + ' '
                               + ( toggleInput.checked ? ( msgs.state_enabled  || 'enabled' )
                                                       : ( msgs.state_disabled || 'disabled' ))
         // Append elements
