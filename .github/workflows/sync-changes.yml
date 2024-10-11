@@ -1,4 +1,4 @@
-name: Sync (/ to adamlui/chatgpt-apps/chatgpt-auto-talk/) && (/greasemonkey/ to adamlui/userscripts/chatgpt/chatgpt-auto-talk/)
+name: Sync * to adamlui/chatgpt-apps/chatgpt-auto-talk/, then greasemonkey/* to adamlui/userscripts/chatgpt/chatgpt-auto-talk/
 
 on:
   push:
