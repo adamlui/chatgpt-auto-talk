@@ -17,6 +17,7 @@
     }
   ],
   "scripts": {
+    "prepare": "husky",
     "build:css": "scss-to-css",
     "lint": "eslint . --cache",
     "lint:all": "eslint .",
