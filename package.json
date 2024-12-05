@@ -25,7 +25,6 @@
     "lint:fix-all": "eslint . --fix"
   },
   "devDependencies": {
-    "@adamlui/scss-to-css": "^1.10.19",
     "@eslint/json": "^0.8.0",
     "@eslint/markdown": "^6.2.1",
     "@stylistic/eslint-plugin-js": "^2.11.0",
