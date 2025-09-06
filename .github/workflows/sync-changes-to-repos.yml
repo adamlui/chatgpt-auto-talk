@@ -20,8 +20,6 @@ jobs:
       - name: Checkout adamlui/chatgpt-auto-talk
         uses: actions/checkout@v5
         with:
-          token: ${{ secrets.REPO_SYNC_PAT }}
-          repository: adamlui/chatgpt-auto-talk
           path: adamlui/chatgpt-auto-talk
           fetch-depth: 2
 
