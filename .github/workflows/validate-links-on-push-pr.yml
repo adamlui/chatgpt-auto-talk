@@ -35,6 +35,7 @@ jobs:
             . --no-progress --include-mail
             --include-fragments --index-files README.md,docs/README.md --exclude "#readme"
             --accept 200..299,300..399,403,429
+            --cache --max-cache-age 3d
             --exclude ghostbrowser\.com
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
